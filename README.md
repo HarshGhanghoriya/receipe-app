@@ -4,7 +4,7 @@ In this project, I made a website which fetch meals from the free API website ht
 
 You can also add a meal in your favourite list and it will get store by using localStorage propery of javascript in the web browser with no expiration date. So it will persist even after you close the browswer or restart the system.
 
-## My site is live at https://receipe-finder-app.netlify.app/
+## My site is live at __________
 
 ## API Reference
 
