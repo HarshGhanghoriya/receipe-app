@@ -1,0 +1,264 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    z-index: 1;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navbar  */
+navbar{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 10px 10%;
+    background-color:black;
+    opacity: 0.5;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+navbar a{
+    text-decoration: none;
+    color: white;
+}
+/* Meal container section  */
+
+#meal-container{
+    width: 100%;
+    min-height: 100vh;
+    height:auto;
+    position: relative;
+    /* border: 1px solid brown; */
+    padding: 20px 0px;
+    margin: auto;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    background: url("/Images/food_background.jpg") no-repeat center center/cover;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+/* Search form   */
+#search-form form{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+#search-form label{
+    font-size: 1.5rem;
+}
+#search-form input{
+    height: 28px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 0px;
+    padding-right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: brown;
+}
+#search-form input::placeholder{
+    color: brown;
+    opacity: 0.7;
+}
+#search-form button{
+    height: 28px;
+    width: 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 0px;
+    margin-left:0px;
+    padding-left: 0px;
+}
+
+/* Autocomplete-search  */
+#autocomplete-search-box{
+    display: flex;
+    flex-direction: column;
+}
+
+#autocomplete-search-box ul{
+    position: absolute;
+    top: 115px;
+    width: 201px;
+    list-style-type:none;
+    margin: 0px;
+    padding: 0px;
+    max-height: 200px;
+    background-color: white;
+   z-index: 1;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+#autocomplete-search-box ul li{
+    color: brown;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* result section  */
+#results{
+    width: 100%;
+    /* border: 1px solid brown; */
+    height: auto;
+    padding: 20px 20px;
+}
+#meals-type{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid brown; */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.meal{
+    position: relative;
+    width: 20%;
+    height: 20%;
+    border: 5px solid white;
+    border-radius: 10px;
+    margin: 3px;
+    cursor: pointer;
+    text-align: center;
+}
+.meal img{
+    width: 100%;
+    height: 100%;
+}
+.meal-info a{
+    font-style: normal;
+    color: white;
+}
+.meal-info{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    transition: opacity 0.2s ease-in;
+    opacity: 0;
+}
+
+
+.meal:hover .meal-info{
+    opacity: 0.8;
+}
+
+/* Add to favourite  */
+.add-to-favourite{
+    cursor: pointer;
+    background-color: rgb(99, 241, 241);
+    color: rgb(94, 26, 37);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+.add-to-favourite:hover{
+    background-color: blanchedalmond;
+}
+
+/* footer  */
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+
+/* utility section  */
+.h-primary{
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.h-secondary{
+    font-size: 1.5rem;
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 950px) {
+    #navbar{
+        justify-content: space-between;
+    }
+
+    #navbar a{
+        font-size: 2.2rem;
+    }
+
+    #meal-container h1{
+        font-size: 2rem;
+    }
+
+   /* search form section  */
+   #search-form label {
+    font-size: 1.5rem;
+    }
+
+   #search-form input {
+    height: 2rem;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+}
+    #search-form button {
+    height: 2rem;
+    width: 2rem;
+}
+
+#meals-type{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+
+.meal{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+    #meals-type{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 2rem;
+    }
+    
+    
+    .meal{
+        position: relative;
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+

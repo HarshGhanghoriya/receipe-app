@@ -1,0 +1,83 @@
+/* Meal details  */
+
+#meal-image{
+    width: 30%;
+}
+
+#meal-image img{
+    width: 100%;
+    height: 100%;
+    border: 5px solid white;
+}
+
+#meal-details{
+    width: 100%;
+    height: auto;
+    border: 10px solid white;
+    margin: 5px 10%;
+    padding: 5px;
+}
+#meal-details p{
+    font-size: 1.3rem;
+    font-weight:200;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    padding: 5px;
+    border-radius: 13px;
+}
+#meal-ingredients{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    border: 5px solid pink;
+    margin: 5px 10%;
+    border-radius: 13px;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 950px) {
+
+    #meal-type{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #meal-details{
+        padding: 0px 10%;
+    }
+
+    #meal-ingredients{
+        width:100%;
+        padding: 0px 10%;
+        font-size: 1.5rem;
+    }
+
+    #meal-image{
+        
+        width: 50%;
+        margin: auto;
+       
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #meal-details{
+        padding: 0px 2%;
+        margin: 5px 1%;
+    }
+
+    #meal-ingredients{
+        margin: 5px 1%;
+        padding: 0px 2%;
+        font-size: 1.5rem;
+    }
+
+    #meal-image{
+        width: 80%;
+        margin: auto;
+    }
+
+}
